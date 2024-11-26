@@ -2,7 +2,7 @@ This Repo is my learning on OpenMP, MPI and CUDA in C++
 
 # Intallation for WSL (Linux) for Cuda
 
-![Install Cuda in WSL](https://www.youtube.com/watch?v=JaHVsZa2jTc&ab_channel=NVIDIADeveloper)
+[Install Cuda in WSL](https://www.youtube.com/watch?v=JaHVsZa2jTc&ab_channel=NVIDIADeveloper)
 
 1. Open your `~/.zshrc` file:
 
@@ -30,11 +30,11 @@ This Repo is my learning on OpenMP, MPI and CUDA in C++
 
 # Installation for Windows (Visual Studio) for Cuda
 
-![Install Cuda in Windows](https://www.youtube.com/watch?v=cL05xtTocmY)
+[Install Cuda in Windows](https://www.youtube.com/watch?v=cL05xtTocmY)
 
 # Install Links
 
-![Cuda Installation Link](https://developer.nvidia.com/cuda-downloads)
+[Cuda Installation Link](https://developer.nvidia.com/cuda-downloads)
 
 # Check the Cuda Version
 
