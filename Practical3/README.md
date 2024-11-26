@@ -39,21 +39,23 @@ nvcc -G -o 07_cuda_program 07_Matrix_Addition.cpp 07_Cuda_Kernel.cu
 
 # How to Run the OpenMP Code in Windows (Visual Studio) For 01 to 06
 
-![Configure OpenMP in Visual Studio](https://www.youtube.com/watch?v=6UIcjxjLXkM)
+[Configure OpenMP in Visual Studio](https://www.youtube.com/watch?v=6UIcjxjLXkM)
 
 1. Go to Project Properties
 2. Go to C/C++
 3. Go to Language
 4. Enable OpenMP Support
-   ![OpenMP Support](img/image2.png)
+   
+   ![OpenMP Support](../img/image2.png)
 
 # How to Run the Cuda Code in Windows (Visual Studio) For 07
 
-![Configure Cuda in Visual Studio](https://medium.com/@aviatorx/c-and-cuda-project-visual-studio-d07c6ad771e3)
+[Configure Cuda in Visual Studio](https://medium.com/@aviatorx/c-and-cuda-project-visual-studio-d07c6ad771e3)
 
 1. Change Solution configuration to Release and Solution Configuration to x64 (as I am using a 64-bit system)
 2. Go to Project > Build Dependencies > Build Customizations, Enable CUDA
 3. Go to Project Properties
 4. Go to Linker > Input > Additional Dependencies
 5. Make sure have %(AdditionalDependencies);cudart.lib;cudadevrt.lib
-   ![Additional Dependencies](img/image3.png)
+   
+   ![Additional Dependencies](../img/image3.png)
