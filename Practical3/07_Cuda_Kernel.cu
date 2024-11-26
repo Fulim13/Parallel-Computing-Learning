@@ -39,7 +39,7 @@ void kernel(double *A, double *B, double *C, int arraySize)
     cudaMemcpy(d_B, B, arraySize * sizeof(double), cudaMemcpyHostToDevice);
 
     // Calculate blocksize and gridsize.
-    dim3 blockSize(512, 1, 1);             // 512 thread ,x,y, z
+    dim3 blockSize(512, 1, 1);             // 512 thread ,x,y, z because gpu is design for 3d gaming
     dim3 gridSize(512 / arraySize + 1, 1); // grid two dimension
 
     // Launch CUDA kernel.

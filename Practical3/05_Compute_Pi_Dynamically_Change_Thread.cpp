@@ -30,8 +30,15 @@ double compute_pi_in_parallel_dynamically_change_num_threads()
         pi = step * sum;
         run_time = omp_get_wtime() - start_time;
 
-        printf("num_threads = %d\n", num_threads);
-        printf("Pi is %.16lf in %lf seconds and %d threads\n ", pi, run_time, num_threads);
+        // Use a parallel block to retrieve the number of threads
+        int actual_num_threads;
+#pragma omp parallel
+        {
+            actual_num_threads = omp_get_num_threads();
+        }
+
+        printf("num_threads = %d\n", actual_num_threads);
+        printf("Pi is %.16lf in %lf seconds and %d threads\n ", pi, run_time, actual_num_threads);
     }
 
     return run_time;
