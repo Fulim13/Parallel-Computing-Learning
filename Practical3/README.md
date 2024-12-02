@@ -16,11 +16,23 @@ nvcc -o 07_cuda_program 07_Matrix_Addition.cpp 07_Cuda_Kernel.cu
 ```
 
 -o 07_cuda_program: Specifies the output executable file
+
 07_Matrix_Addition.cpp : Your main host program.
+
 07_Cuda_Kernel.cu: Your CUDA kernel code.
 
 ```
 ./07_cuda_program
+```
+
+# How to Run the Cuda Code in WSL (Linux) For 08
+
+```
+nvcc -o 08_main 08_main.cpp 08_SerialVectorAdd.cpp 08_ParallelVectorAdd.cu
+```
+
+```
+ ./08_main
 ```
 
 # Debugging for Cuda in WSL (Linux)
@@ -45,7 +57,7 @@ nvcc -G -o 07_cuda_program 07_Matrix_Addition.cpp 07_Cuda_Kernel.cu
 2. Go to C/C++
 3. Go to Language
 4. Enable OpenMP Support
-   
+
    ![OpenMP Support](../img/image2.png)
 
 # How to Run the Cuda Code in Windows (Visual Studio) For 07
@@ -57,5 +69,5 @@ nvcc -G -o 07_cuda_program 07_Matrix_Addition.cpp 07_Cuda_Kernel.cu
 3. Go to Project Properties
 4. Go to Linker > Input > Additional Dependencies
 5. Make sure have %(AdditionalDependencies);cudart.lib;cudadevrt.lib
-   
+
    ![Additional Dependencies](../img/image3.png)
