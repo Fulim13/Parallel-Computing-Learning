@@ -35,6 +35,16 @@ nvcc -o 08_main 08_main.cpp 08_SerialVectorAdd.cpp 08_ParallelVectorAdd.cu
  ./08_main
 ```
 
+# How to Run the Cuda Code in WSL (Linux) For 10
+
+```
+nvcc -o 10_MatrixMultiply 10_MatrixMultiply.cu
+```
+
+```
+ ./10_MatrixMultiply
+```
+
 # Debugging for Cuda in WSL (Linux)
 
 Verify GPU Availability
