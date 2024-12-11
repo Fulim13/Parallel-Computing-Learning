@@ -20,7 +20,7 @@ double Sum_array(int nval, double *A)
     return sum;
 }
 
-int producer_consumer_serial()
+double producer_consumer_serial()
 {
     double *A, sum, runtime;
     int flag = 0;
@@ -35,12 +35,12 @@ int producer_consumer_serial()
 
     printf(" In %lf seconds, The sum is %lf \n", runtime, sum);
 
-    return 0;
+    return runtime;
 }
 
-int producer_consumer_parallel()
+double producer_consumer_parallel()
 {
-    double *A, sum, runtime;
+    double *A, sum = 0.0, runtime;
     int flag = 0;
 
     A = (double *)malloc(N * sizeof(double));
@@ -52,20 +52,35 @@ int producer_consumer_parallel()
     {
 #pragma omp section
         {
-            fill_rand(N, A); // Producer: fill an array of data
-#pragma omp flush(A)
-            flag = 1;
-#pragma omp flush(flag)
+            int i = 0;
+            // Producer: produce 1 random value and put it in A[i++]
+            // until all values are produced
+            while (i < N)
+            {
+                if (flag == 0)
+                {
+                    A[i] = (double)rand(); // produce a random value
+                    i++;                   // move to the next index
+                    flag = 1;              // signal the consumer
+#pragma omp flush(flag)                    // Ensure visibility of flag
+                }
+            }
         }
 
 #pragma omp section
         {
-            while (flag == 0)
+            int j = 0;
+            // Consumer: sum the array when producer has placed data
+            while (j < N)
             {
-#pragma omp flush(flag)
+                if (flag == 1)
+                {
+                    sum += A[j]; // consume the value
+                    j++;         // move to the next value
+                    flag = 0;    // signal the producer
+#pragma omp flush(flag)          // Ensure visibility of flag
+                }
             }
-#pragma omp flush(A)
-            sum = Sum_array(N, A); // Consumer: sum the array
         }
     }
 
@@ -73,12 +88,12 @@ int producer_consumer_parallel()
 
     printf(" In %lf seconds, The sum is %lf \n", runtime, sum);
 
-    return 0;
+    return runtime;
 }
 
 int main()
 {
-    double ori, mod1;
+    double ori = 0.0, mod1 = 0.0;
 
     ori = producer_consumer_serial();
     mod1 = producer_consumer_parallel();
