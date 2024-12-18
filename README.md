@@ -42,6 +42,30 @@ This Repo is my learning on OpenMP, MPI and CUDA in C++
 nvcc --version
 ```
 
+# Install MPI on WSL
+
+```bash
+sudo apt install openmpi-bin openmpi-common libopenmpi-dev
+```
+
+# Check the MPI Version
+
+```bash
+mpiexec --version
+```
+
+# Install MPI on Windows
+
+[MPI Installation Link](https://www.microsoft.com/en-us/download/details.aspx?id=105289)
+
+![alt text](img/image4.png)
+
+![alt text](img/image5.png)
+
+![alt text](img/image6.png)
+
+![alt text](img/image7.png)
+
 # Create a new project in Visual Studio
 
 ![C++ Console App](img/image.png)
