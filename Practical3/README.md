@@ -35,6 +35,10 @@ nvcc -o 08_main 08_main.cpp 08_SerialVectorAdd.cpp 08_ParallelVectorAdd.cu
  ./08_main
 ```
 
+# How to Run 09
+
+For all Jupyter Notebooks (Ipynb), it is recommended to use Google Colab to run the code.
+
 # How to Run the Cuda Code in WSL (Linux) For 10
 
 ```
