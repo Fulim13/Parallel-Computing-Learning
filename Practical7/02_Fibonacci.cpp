@@ -1,17 +1,17 @@
-#include <stdlib.h>
-#include <iostream>
+#include <stdlib.h> // malloc, free
+#include <iostream> // cout
 #include <omp.h>
 
 using namespace std;
 
-#define N 5
-#define FS 38
+#define N 5   // number of elements in the linked list
+#define FS 38 // fibonacci number to be computed
 
 struct node
 {
-    int data;
-    int fibdata;
-    struct node *next;
+    int data;          // n value in the fibonacci sequence, eg. 38, 39, 40, 41, 42
+    int fibdata;       // result of the fibonacci computation, eg. 39088169
+    struct node *next; // pointer to the next node in the linked list
 };
 
 int fib(int n)
@@ -32,8 +32,8 @@ int fib(int n)
 void processwork(struct node *p)
 {
     int n;
-    n = p->data;
-    p->fibdata = fib(n);
+    n = p->data;         // get the n value(data) from the node
+    p->fibdata = fib(n); // compute the fibonacci value and put it into fibdata in the node
 }
 
 struct node *init_list()
@@ -127,7 +127,6 @@ double calc_fib_parallel()
 #pragma omp parallel for
     for (i = 0; i < N; i++)
     {
-        int id = i;
         processwork(arrayOfPointers[i]);
     }
 
