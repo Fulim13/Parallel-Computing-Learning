@@ -44,3 +44,15 @@ mpic++ 04_Send_Recv.cpp -o 04_Send_Recv
 mpirun -np 4 ./04_Send_Recv
 
 ```
+
+# How to run 05
+
+```
+mpic++ 05_Scatter_Gather.cpp -o 05_Scatter_Gather
+
+```
+
+```
+mpirun -np 4 ./05_Scatter_Gather 1000
+
+```
