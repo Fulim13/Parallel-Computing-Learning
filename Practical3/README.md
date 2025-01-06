@@ -52,7 +52,7 @@ nvcc -o 11_MatrixMultiply2d 11_MatrixMultiply2d.cu
 ```
 
 ```
- ./11_MatrixMultiply
+ ./11_MatrixMultiply2d
 ```
 
 # Debugging for Cuda in WSL (Linux)
