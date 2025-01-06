@@ -1,0 +1,20 @@
+{
+  "configurations": [
+    {
+      "name": "Linux",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "/usr/include/opencv4",
+        "/usr/local/cuda/include",
+        "/usr/lib/x86_64-linux-gnu/openmpi/include", // Main MPI include directory
+        "/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi" // Additional MPI headers
+      ],
+      "defines": [],
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "c17",
+      "cppStandard": "gnu++17",
+      "intelliSenseMode": "linux-gcc-x64"
+    }
+  ],
+  "version": 4
+}
