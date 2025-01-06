@@ -29,6 +29,18 @@ mpic++ 03_Broadcast.cpp -o 03_Broadcast
 ```
 
 ```
-mpirun -np 16 ./03_Broadcast
+mpirun -np 8 ./03_Broadcast
+
+```
+
+# How to run 04
+
+```
+mpic++ 04_Send_Recv.cpp -o 04_Send_Recv
+
+```
+
+```
+mpirun -np 4 ./04_Send_Recv
 
 ```
