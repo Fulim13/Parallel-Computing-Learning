@@ -45,6 +45,16 @@ nvcc -o 10_MatrixMultiply 10_MatrixMultiply.cu
  ./10_MatrixMultiply
 ```
 
+# How to Run the Cuda Code in WSL (Linux) For 11
+
+```
+nvcc -o 11_MatrixMultiply2d 11_MatrixMultiply2d.cu
+```
+
+```
+ ./11_MatrixMultiply
+```
+
 # Debugging for Cuda in WSL (Linux)
 
 Verify GPU Availability
