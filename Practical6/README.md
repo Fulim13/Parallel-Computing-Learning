@@ -29,6 +29,6 @@ mpic++ 03_Broadcast.cpp -o 03_Broadcast
 ```
 
 ```
-mpirun -np 4 ./03_Broadcast
+mpirun -np 16 ./03_Broadcast
 
 ```

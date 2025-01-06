@@ -14,6 +14,7 @@ int main(int argc, char **argv)
 
     do
     {
+
         if (rank == 0)
         {
             printf("Please give a number (negative number to terminate): ");
@@ -32,13 +33,13 @@ int main(int argc, char **argv)
         // Synchronize the processes (wait for all the
         // processes to print their values before proceeding
         // to ask for the next value.)
-        // MPI_Barrier(MPI_COMM_WORLD);
+        MPI_Barrier(MPI_COMM_WORLD);
         // Without barrier, process will run at different speed,
         // if the thread haven't print out the value before the thread 0, loop again, the prompt will generate firt, then other thread value then print out
-
     } while (value >= 0);
 
     printf("Process %d terminated.\n", rank);
+    MPI_Finalize();
 
     return 0;
 }
