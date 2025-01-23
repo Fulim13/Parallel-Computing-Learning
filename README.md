@@ -1,9 +1,5 @@
 This Repo is my learning on OpenMP, MPI and CUDA in C++
 
-# Unsolved Problem
-
-Practical 4 06_Producer_Consumer_Exercise_Unsolved.ipynb
-
 # Intallation for WSL (Linux) for Cuda
 
 [Install Cuda in WSL](https://www.youtube.com/watch?v=JaHVsZa2jTc&ab_channel=NVIDIADeveloper)
@@ -22,7 +18,6 @@ Practical 4 06_Producer_Consumer_Exercise_Unsolved.ipynb
 
    # Add CUDA libraries to LD_LIBRARY_PATH
    export LD_LIBRARY_PATH="/usr/local/cuda-12.6/lib64:$LD_LIBRARY_PATH"
-
    ```
 
 3. **Save and exit** the editor (`Ctrl + X`, then `Y`, and `Enter`).
@@ -32,19 +27,17 @@ Practical 4 06_Producer_Consumer_Exercise_Unsolved.ipynb
    source ~/.zshrc
    ```
 
-# Installation for Windows (Visual Studio) for Cuda
-
-[Install Cuda in Windows](https://www.youtube.com/watch?v=cL05xtTocmY)
-
-# Install Links
-
-[Cuda Installation Link](https://developer.nvidia.com/cuda-downloads)
-
 # Check the Cuda Version
 
 ```bash
 nvcc --version
 ```
+
+# Installation for Windows (Visual Studio) for Cuda
+
+[Install Cuda in Windows](https://www.youtube.com/watch?v=cL05xtTocmY)
+
+[Cuda Installation Link](https://developer.nvidia.com/cuda-downloads)
 
 # Install MPI on WSL
 
