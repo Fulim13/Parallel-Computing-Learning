@@ -32,7 +32,7 @@ nvcc -o 08_main 08_main.cpp 08_SerialVectorAdd.cpp 08_ParallelVectorAdd.cu
 ```
 
 ```
- ./08_main
+./08_main
 ```
 
 # How to Run 09
@@ -46,7 +46,7 @@ nvcc -o 10_MatrixMultiply 10_MatrixMultiply.cu
 ```
 
 ```
- ./10_MatrixMultiply
+./10_MatrixMultiply
 ```
 
 # How to Run the Cuda Code in WSL (Linux) For 11
@@ -56,7 +56,7 @@ nvcc -o 11_MatrixMultiply2d 11_MatrixMultiply2d.cu
 ```
 
 ```
- ./11_MatrixMultiply2d
+./11_MatrixMultiply2d
 ```
 
 # Debugging for Cuda in WSL (Linux)
